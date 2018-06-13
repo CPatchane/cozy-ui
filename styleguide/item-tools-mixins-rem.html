@@ -87,20 +87,36 @@
           the "root" element comes first in this loop, and can be detected using
           the "#if @first" block as seen below.
         -->
-            <header class="kss-section kss-section--depth-3" id="kssref-settings-breakpoints-no-desktop">
+            <header class="kss-section kss-section--depth-3" id="kssref-tools-mixins-rem">
 
             <article class="kss-section__content">
 
-              <a class="kss-section__permalink" href="#kssref-settings-breakpoints-no-desktop">
+              <a class="kss-section__permalink" href="#kssref-tools-mixins-rem">
                 <h3 class="kss-section__item kss-section__item--depth-3">
-                  <span class="kss-section__ref">1.1.10</span>
-                  <span class="kss-section__name">no-desktop()</span>
+                  <span class="kss-section__ref">2.1.1</span>
+                  <span class="kss-section__name">rem($value, $basefont)</span>
                 </h3>
               </a>
 
-                <div class="kss-section__description"><p>Refers to medium-screen() which is (max-width: 1023px)</p>
+                <div class="kss-section__description"><p>rem() takes one or more numeric values in pixel and calculates the rem values from it.</p>
+<p>NB: you don&#39;t have to explicitly write the <code>px</code> unit.</p>
 </div>
 
+                <div class="kss-parameters__title">Parameters:</div>
+                <ul class="kss-parameters">
+                  <li class="kss-parameters__item">
+                    <div class="kss-parameters__name"><code>$value</code></div>
+                    <div class="kss-parameters__description">
+                      The value in pixel you want to translate in rem. For multiple values you can use <code>rem(14 12)</code> for shorthand properties such as <code>margin</code>. ⚠ Multiples values should be separated by spaces.
+                    </div>
+                  </li>
+                  <li class="kss-parameters__item">
+                    <div class="kss-parameters__name"><code>$basefont</code></div>
+                    <div class="kss-parameters__description">
+                      If you need to overwrite the default <code>$basefont</code> value of <code>16</code>
+                    </div>
+                  </li>
+                </ul>
             </article>
 
 

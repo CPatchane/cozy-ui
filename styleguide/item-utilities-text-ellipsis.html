@@ -87,32 +87,45 @@
           the "root" element comes first in this loop, and can be detected using
           the "#if @first" block as seen below.
         -->
-            <header class="kss-section kss-section--depth-3" id="kssref-tools-mixins-em">
+            <header class="kss-section kss-section--depth-3" id="kssref-utilities-text-ellipsis">
 
             <article class="kss-section__content">
 
-              <a class="kss-section__permalink" href="#kssref-tools-mixins-em">
+              <a class="kss-section__permalink" href="#kssref-utilities-text-ellipsis">
                 <h3 class="kss-section__item kss-section__item--depth-3">
-                  <span class="kss-section__ref">2.1.1</span>
-                  <span class="kss-section__name">em($size)</span>
+                  <span class="kss-section__ref">4.6.6</span>
+                  <span class="kss-section__name">Ellipsis</span>
                 </h3>
               </a>
 
-                <div class="kss-section__description"><p>em() mixin basically converts pixel sizes in em according to its context.
-More generic mixin than font-size() but it does exactly the same job.</p>
+                <div class="kss-section__description"><p>Adds ellipsis to a long text</p>
 </div>
 
-                <div class="kss-parameters__title">Parameters:</div>
-                <ul class="kss-parameters">
-                  <li class="kss-parameters__item">
-                    <div class="kss-parameters__name"><code>$size</code></div>
-                    <div class="kss-parameters__description">
-                      The size in pixel you want to be converted in em
-                    </div>
-                  </li>
-                </ul>
             </article>
 
+              <article class="kss-section__modifiers">
+                <h1 class="kss-modifiers__heading">Examples</h1>
+
+                  <h2 class="kss-modifiers__name">Default styling</h2>
+
+                <div class="kss-modifiers__example"><p class="[modifier class]">
+   Augusta Ada King-Noel, Countess of Lovelace (née Byron; 10 December 1815 – 27 November 1852) was an English mathematician and writer, chiefly known for her work on Charles Babbage's proposed mechanical general-purpose computer, the Analytical Engine. She was the first to recognise
+</p></div>
+
+                  <h2 class="kss-modifiers__name">.u-ellipsis</h2>
+
+                  <p class="kss-modifiers__description">Ellipsis at the end</p>
+
+                  <div class="kss-modifiers__example"><p class="u-ellipsis">
+   Augusta Ada King-Noel, Countess of Lovelace (née Byron; 10 December 1815 – 27 November 1852) was an English mathematician and writer, chiefly known for her work on Charles Babbage's proposed mechanical general-purpose computer, the Analytical Engine. She was the first to recognise
+</p></div>
+              </article>
+
+                <article class="kss-section__markup">
+                  <pre><code class="language-markup">&lt;p class&#x3D;&quot;[modifier class]&quot;&gt;
+   Augusta Ada King-Noel, Countess of Lovelace (née Byron; 10 December 1815 – 27 November 1852) was an English mathematician and writer, chiefly known for her work on Charles Babbage&#x27;s proposed mechanical general-purpose computer, the Analytical Engine. She was the first to recognise
+&lt;/p&gt;</code></pre>
+                </article>
 
             </header>
     </section>

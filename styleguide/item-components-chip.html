@@ -87,36 +87,91 @@
           the "root" element comes first in this loop, and can be detected using
           the "#if @first" block as seen below.
         -->
-            <header class="kss-section kss-section--depth-3" id="kssref-tools-mixins-fontsize">
+            <header class="kss-section kss-section--depth-2" id="kssref-components-chip">
 
             <article class="kss-section__content">
 
-              <a class="kss-section__permalink" href="#kssref-tools-mixins-fontsize">
-                <h3 class="kss-section__item kss-section__item--depth-3">
-                  <span class="kss-section__ref">2.1.2</span>
-                  <span class="kss-section__name">font-size($size)</span>
-                </h3>
+              <a class="kss-section__permalink" href="#kssref-components-chip">
+                <h2 class="kss-section__item kss-section__item--depth-2">
+                  <span class="kss-section__ref">5.2</span>
+                  <span class="kss-section__name">Chip</span>
+                </h2>
               </a>
 
-                <div class="kss-section__description"><p>font-size() mixin allows you to write font-size in pixels and get the
-equivalent size in em.</p>
-<p>You can even skip the parenthesis and write it as basic font-size
-declaration.</p>
-<p>N.B: If you write rem instead of px, the mixin won&#39;t trigger and the basic
-font-size declaration will apply.</p>
+                <div class="kss-section__description"><p>Display an chip that represents complex identity</p>
 </div>
 
-                <div class="kss-parameters__title">Parameters:</div>
-                <ul class="kss-parameters">
-                  <li class="kss-parameters__item">
-                    <div class="kss-parameters__name"><code>$size</code></div>
-                    <div class="kss-parameters__description">
-                      The size en pixel you want your text in
-                    </div>
-                  </li>
-                </ul>
             </article>
 
+              <article class="kss-section__modifiers">
+                <h1 class="kss-modifiers__heading">Example</h1>
+
+
+                <div class="kss-modifiers__example"><div>
+   <div class="c-chip">
+       <svg class="u-mr-half" xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16">
+           <path d="M14,5c0,-1.656 -1.344,-3 -3,-3l-6,0c-1.656,0 -3,1.344 -3,3l0,6c0,1.656 1.344,3 3,3l6,0c1.656,0 3,-1.344 3,-3l0,-6Z"/>
+       </svg>
+       File
+   </div>
+</div>
+<div>
+   <div class="c-chip">
+       <div class="c-avatar c-avatar--small u-mr-half">
+           <img src="https://cozy.io/fr/images/cozy-logo_white.png" class="c-avatar-image" alt="">
+       </div>
+       Ada Lovelace
+   </div>
+</div>
+<div>
+   <div class="c-chip">
+       Developer
+       <span class="c-chip-separator"></span>
+       Ada Lovelace
+   </div>
+</div>
+<div>
+   <div class="c-chip c-chip--round">
+       <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16">
+           <path d="M14,5c0,-1.656 -1.344,-3 -3,-3l-6,0c-1.656,0 -3,1.344 -3,3l0,6c0,1.656 1.344,3 3,3l6,0c1.656,0 3,-1.344 3,-3l0,-6Z"/>
+       </svg>
+   </div>
+</div></div>
+
+              </article>
+
+                <article class="kss-section__markup">
+                  <pre><code class="language-markup">&lt;div&gt;
+   &lt;div class&#x3D;&quot;c-chip&quot;&gt;
+       &lt;svg class&#x3D;&quot;u-mr-half&quot; xmlns&#x3D;&quot;http://www.w3.org/2000/svg&quot; width&#x3D;&quot;16&quot; height&#x3D;&quot;16&quot; viewBox&#x3D;&quot;0 0 16 16&quot;&gt;
+           &lt;path d&#x3D;&quot;M14,5c0,-1.656 -1.344,-3 -3,-3l-6,0c-1.656,0 -3,1.344 -3,3l0,6c0,1.656 1.344,3 3,3l6,0c1.656,0 3,-1.344 3,-3l0,-6Z&quot;/&gt;
+       &lt;/svg&gt;
+       File
+   &lt;/div&gt;
+&lt;/div&gt;
+&lt;div&gt;
+   &lt;div class&#x3D;&quot;c-chip&quot;&gt;
+       &lt;div class&#x3D;&quot;c-avatar c-avatar--small u-mr-half&quot;&gt;
+           &lt;img src&#x3D;&quot;https://cozy.io/fr/images/cozy-logo_white.png&quot; class&#x3D;&quot;c-avatar-image&quot; alt&#x3D;&quot;&quot;&gt;
+       &lt;/div&gt;
+       Ada Lovelace
+   &lt;/div&gt;
+&lt;/div&gt;
+&lt;div&gt;
+   &lt;div class&#x3D;&quot;c-chip&quot;&gt;
+       Developer
+       &lt;span class&#x3D;&quot;c-chip-separator&quot;&gt;&lt;/span&gt;
+       Ada Lovelace
+   &lt;/div&gt;
+&lt;/div&gt;
+&lt;div&gt;
+   &lt;div class&#x3D;&quot;c-chip c-chip--round&quot;&gt;
+       &lt;svg xmlns&#x3D;&quot;http://www.w3.org/2000/svg&quot; width&#x3D;&quot;16&quot; height&#x3D;&quot;16&quot; viewBox&#x3D;&quot;0 0 16 16&quot;&gt;
+           &lt;path d&#x3D;&quot;M14,5c0,-1.656 -1.344,-3 -3,-3l-6,0c-1.656,0 -3,1.344 -3,3l0,6c0,1.656 1.344,3 3,3l6,0c1.656,0 3,-1.344 3,-3l0,-6Z&quot;/&gt;
+       &lt;/svg&gt;
+   &lt;/div&gt;
+&lt;/div&gt;</code></pre>
+                </article>
 
             </header>
     </section>
