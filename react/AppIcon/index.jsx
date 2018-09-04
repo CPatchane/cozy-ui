@@ -30,6 +30,7 @@ export class AppIcon extends Component {
 
     try {
       const icon = await fetchIcon(app.links.icon)
+      if (!icon) throw new Error('No app icon found/fetched')
       this.setState({ icon, status: 'done' })
     } catch (error) {
       this.setState({ error, status: 'failed' })
@@ -37,7 +38,7 @@ export class AppIcon extends Component {
   }
 
   render() {
-    const { alt } = this.props
+    const { alt, className } = this.props
     const { icon, status } = this.state
     switch (status) {
       case 'idle':
@@ -46,12 +47,19 @@ export class AppIcon extends Component {
           <div
             className={classNames(
               styles['c-loading-placeholder'],
-              styles['c-app-icon']
+              styles['c-app-icon'],
+              className
             )}
           />
         )
       case 'done':
-        return <img className={styles['c-app-icon']} src={icon} alt={alt} />
+        return (
+          <img
+            className={classNames(styles['c-app-icon'], className)}
+            src={icon}
+            alt={alt}
+          />
+        )
       case 'failed':
       default:
         return (
@@ -67,6 +75,8 @@ export class AppIcon extends Component {
 }
 
 AppIcon.propTypes = {
+  className: PropTypes.string,
+  alt: PropTypes.string,
   fetchIcon: PropTypes.func.isRequired
 }
 
