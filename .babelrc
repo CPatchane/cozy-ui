@@ -1,19 +1,25 @@
 {
-  "presets": [
-    "cozy-app"
-  ],
-  "plugins": [
-    ["transform-runtime", { "polyfill": false }]
-  ],
+  "presets": ["cozy-app"],
+  "plugins": [["transform-runtime", { "polyfill": false }]],
   "env": {
     "transpilation": {
       "plugins": [
-        ["css-modules-transform", {
-          extensions: [".styl"],
-          preprocessCss: "./preprocess",
-          extractCss: "./transpiled/stylesheet.css",
-          generateScopedName: "[name]__[local]___[hash:base64:5]",
-        }]
+        [
+          "css-modules-transform",
+          {
+            "extensions": [".styl"],
+            "preprocessCss": "./preprocess",
+            "extractCss": "./transpiled/stylesheet.css",
+            "generateScopedName": "[name]__[local]___[hash:base64:5]"
+          }
+        ],
+        [
+          "./scripts/babel-require-file",
+          {
+            "stylesPath": "../stylesheet.css",
+            "targetPath": "react/index.js"
+          }
+        ]
       ]
     }
   },
