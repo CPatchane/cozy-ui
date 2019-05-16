@@ -13,48 +13,31 @@ If you plan to build a webapp to run on Cozy, you'll probably want to use a simp
 
 ## CSS Styleguide
 
-Check the [styleguide](https://cozy.github.io/cozy-ui/styleguide) to see all the variables, mixins, classes, utilities and how to use them with only CSS classes.
+Check the [styleguide](https://docs.cozy.io/cozy-ui/styleguide) to see all the variables, mixins, classes, utilities and how to use them with only CSS classes.
 
 ## React components
 
-Check out [UI components](https://cozy.github.io/cozy-ui/react/) to see how to use ready made (p)React components.
+Check out [UI components](https://docs.cozy.io/cozy-ui/react/) to see how to use ready made (p)React components.
 
 ## Usage
 
 ### As a Components library
 
-Use [`yarn`](https://yarnpkg.com/) to add Cozy UI to a dependency to your project.
+Add Cozy UI to a dependency to your project.
 ```
-yarn add cozy-ui
-```
-
-You're now ready to use [Cozy UI's (p)React components](https://cozy.github.io/cozy-ui/react/)
-
-### As a Stylus plugin
-[Stylus][stylus] is used as a preprocessor. You can add it as a library in your project to use it out-of-the-box.
-
-Cozy UI can be distributed as a plugin.
-
-```sh
-$ yarn add -D cozy-ui
+npm install cozy-ui
 ```
 
-Then simply add it to your plugins stack:
+If you use the transpiled components (from `cozy-ui/transpiled/react`), you need to import the stylesheet (once):
 
-```js
-var stylus  = require('stylus')
-  , cozyui = require('cozy-ui/stylus');
+```
+import Button from 'cozy-ui/transpiled/react/Button'
+import 'cozy-ui/transpiled/react/stylesheet.css'
 
-
-function compile(str, path) {
-return stylus(str)
-  .set('filename', path)
-  .set('compress', true)
-  .use(cozyui());
-}
+<Button />
 ```
 
-Then, you just need to add a `@import 'cozy-ui'` statement at top of your main stylus file.
+You're now ready to use [Cozy UI's (p)React components](https://docs.cozy.io/cozy-ui/react/)
 
 ### As a vanilla CSS library
 
@@ -103,7 +86,6 @@ Cozy UI is developed by Cozy Cloud and distributed under the AGPL-3.0 license.
 same private space. With it, your web apps and your devices can share data
 easily, providing you with a new experience. You can install Cozy on your own
 hardware where no one profiles you.
-
 
 ## Community
 
